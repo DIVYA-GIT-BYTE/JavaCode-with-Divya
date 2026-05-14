@@ -1,0 +1,21 @@
+class Automorphic 
+{
+	public static void main(String[] args) 
+	{
+		int n=7;
+		int s1=n*n;
+		int temp=n,p=1;
+		while (n>0)
+		{
+			p*=10;
+			n/=10;
+		}
+		int s2=s1%p;
+		if (s2==temp)
+		{
+			System.out.println("Automorphic number");
+		}else{
+			System.out.println("Not automorphic number");
+		}
+	}
+	}

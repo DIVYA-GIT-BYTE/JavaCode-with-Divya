@@ -1,0 +1,32 @@
+class CountOf2 
+{
+	public static int Count(int a)
+	{
+		int c=0;
+		while (a!=0)
+		{
+			int r=a%10;
+			if(r==2)
+		    {
+			  c++;
+		    }
+			a/=10;
+		}
+		if (c>=2)
+		{
+			return 1;
+		}else{
+			return c;
+		}
+	}
+	public static void main(String[] args) 
+	{
+		int m=10,n=30;
+		int count=0;
+		for (int i=m;i<=n;i++)
+		{
+			count=count+Count(i);
+		}
+		System.out.println(count);
+	}
+}

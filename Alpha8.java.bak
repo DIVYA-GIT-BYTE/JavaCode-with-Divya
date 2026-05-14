@@ -1,0 +1,15 @@
+/*
+a b c d e
+f g h i a
+b c d e f
+g h i a b
+c d e f g
+*/
+class Alpha8 
+{
+	public static void main(String[] args) 
+	{
+		int 
+		System.out.println("Hello World!");
+	}
+}

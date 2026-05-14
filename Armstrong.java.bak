@@ -1,0 +1,41 @@
+class Armstrong 
+{
+	public static int count(int a)
+	{
+		int c=0;
+		while (a!=0)
+		{
+			c++;
+			a/=10;
+		}
+		return c;
+	}
+	public static int Power(int b,int c){
+		int pro=1;
+		for (int i=1;i<=c;i++)
+		{
+			pro=pro*b;
+		}
+		return pro;
+	}
+	
+	public static void main(String[] args) 
+	{
+		int n=1634;
+		int temp=n,res=n;
+		int s=count(n);
+		int prod=0;
+		while (temp!=0)
+		{
+			int r=temp%10;
+			prod=prod + Power(r,count(n));
+			temp/=10;
+		}
+		if (prod==res)
+		{
+			System.out.println("Armstrong");
+		}else{
+			System.out.println("Not armstrong");
+		}		
+	}
+}

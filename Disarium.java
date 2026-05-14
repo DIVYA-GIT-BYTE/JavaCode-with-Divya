@@ -1,0 +1,50 @@
+
+class Disarium 
+{
+	public static int count(int a){
+		int c=0;
+		while (a!=0)
+		{
+			c++;
+			a=a/10;
+		}
+		return c;
+	}
+	public static int product(int b,int c){
+		int prod=1;
+		for (int i=1;i<=c;i++)
+		{
+			prod=prod*b;
+		}
+		return prod;
+	}
+	public static boolean Disa(int m)
+	{
+		int t=m;
+		int c1=count(m);
+		int res=0;
+		while (m!=0)
+		{
+			int r=m%10;
+			res=res+product(r,c1);
+			m=m/10;
+			c1=c1-1;
+		}
+		if (res==t)
+		{
+			return true;
+		}else{
+			return false;
+		}
+	}
+	public static void main(String[] args) 
+	{
+		int n=145;
+		if (Disa(n))
+		{
+			System.out.println("DISARIUM NUMBER");
+		}else{
+			System.out.println("NOT A DISARIUM NUMBER");
+		}
+	}
+}

@@ -1,0 +1,45 @@
+class DigitAscending 
+{
+	/*public static void main(String[] args) 
+	{
+		int n=5361793;
+		int r1=n%10; 
+		n=n/10;
+		int p=1;
+		int res=r1*p;
+		p=p*10;
+		while (n!=0)
+		{
+			int r2=n%10; 
+			if (r1<=r2)
+			{
+			   r1=r2;
+			   res=r2*p+res;
+			   p*=10;
+			}else{
+				res=res*10+r2;
+			}
+			n=n/10;
+		}
+		System.out.println(res);
+		*/
+		public static void main(String[] args) 
+	{
+		int n=5361793;
+		int res=0;
+		
+		for (int i=1;i<=9;i++)
+		{
+			int t=n;
+			while (t!=0)
+			{
+				if (t%10==i)
+				{
+					res=res*10+t%10;
+				}
+				t/=10;
+			}
+		}
+		System.out.println(res);
+	}
+}
